@@ -1,7 +1,7 @@
 # Groups
 
 <div class="flex flex-row gap-x-2 m-t-2 m-b-12">
-  <div class="flex flex-col flex-50 font-xxlarge justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
+  <div class="flex flex-col flex-50 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="" style="">
     <li>Manages permissions</li>
@@ -20,7 +20,7 @@
 <details>
   <summary class="highlight font-bold" style="font-size:xx-large; margin-bottom: 10px; ">More info</summary>
 
-  <div class="flex flex-col font-xlarge" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
+  <div class="flex flex-col text-xl" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
 
