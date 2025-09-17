@@ -1,0 +1,20 @@
+
+/* Globals */
+
+:root {
+    --content-max-width: 80%;
+    --aruna-highlight: #00a0cc;
+    --spacing: .25rem;
+}
+
+.ayu {
+    --links: #00a0cc;
+    --sidebar-active: #00a0cc;
+    --sidebar-spacer: #00a0cc;
+}
+
+.navy {
+    --links: #00a0cc;
+    --sidebar-active: #00a0cc;
+    --sidebar-spacer: #00a0cc;
+}

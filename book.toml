@@ -1,0 +1,11 @@
+[book]
+authors = ["Jannis Schlegel, Lukas Brehm"]
+language = "en"
+src = "src"
+title = "Aruna v3 Workshop"
+
+[rust]
+edition = "2024"
+
+[output.html]
+additional-css = ["theme/css/var_overwrite.css", "theme/css/class_overwrite.css"]
