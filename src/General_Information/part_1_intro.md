@@ -1,4 +1,4 @@
-<div class="flex flex-col" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
+<div class="flex flex-col p-x-6" style="border: 2px dashed #00a0cc; border-radius: 4px">
 
   # Part 1: Learning & Discovery (1.5 hours)
 

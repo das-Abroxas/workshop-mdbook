@@ -1,6 +1,6 @@
 # Node Communication
 
-<div class="flex flex-row gap-x-2 m-t-2 m-b-12">
+<div class="flex flex-row gap-2 m-t-2 m-b-12">
   <div class="flex flex-col flex-50 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="" style="">

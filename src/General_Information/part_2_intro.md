@@ -10,7 +10,7 @@ We're excited to share this sneak peek with you and gather your insights to help
 
 By the end of this workshop, you will have a clear understanding of the key improvements from version 2 to version 3, basic knowledge of all new features, and hands-on experience using these in real-world scenarios.
 
-<div class="flex flex-row gap-x-2 m-t-2">
+<div class="flex flex-row gap-2 m-t-2">
   <div class="flex flex-col" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
 ## Part 1: Learning & Discovery (1.5 hours)
