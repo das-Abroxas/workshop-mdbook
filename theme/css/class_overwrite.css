@@ -32,8 +32,8 @@ h3 { margin-block-start: 1em; }
 .flex-shrink-0 { flex-shrink: 0; }
 .flex-grow-0 { flex-grow: 0; }
 
-.flex-15 { flex: 0 0 15%; }
-.flex-20 { flex: 0 0 20%; }
+.flex-15 { flex: 0 0 15%; max-width: 15%; }
+.flex-20 { flex: 0 0 20%; max-width: 20%;}
 .flex-25 { flex: 1 0 25%; }
 .flex-50 { flex: 1 0 50%; }
 .flex-60 { flex: 1 0 60%; }
@@ -89,7 +89,7 @@ h3 { margin-block-start: 1em; }
 .text-l { font-size: large; }
 .text-xl { font-size: x-large; }
 .text-2xl { font-size: xx-large; }
-.text-3xl { font-size: 5rem; }
+.text-3xl { font-size: 4rem; }
 
 .font-bold { font-weight: bold; }
 
