@@ -2,18 +2,20 @@
 
 ## Overview
 
-This exclusive preview workshop combines structured learning with early access testing, ensuring you gain both theoretical understanding of upcoming changes and practical experience with pre-release features. Whether you're currently using version 2 or planning to implement our product for the first time, you'll develop advance knowledge that will give you a significant advantage when version 3 officially launches.
+<div class="text-xl">
+  This preview workshop combines structured learning with early access testing, ensuring you gain both theoretical understanding of upcoming changes and practical experience with pre-release features. We're excited to share this sneak peek with you and gather your insights to help shape the featureset draft.
+</div>
 
-We're excited to share this sneak peek with you and gather your insights to help shape the featureset draft.
 
-## Objectives
+## Agenda
 
-By the end of this workshop, you will have a clear understanding of the key improvements from version 2 to version 3, basic knowledge of all new features, and hands-on experience using these in real-world scenarios.
+<div class="flex flex-row justify-between gap-2 m-t-12">
+  <div class="flex flex-col flex-45 p-8" style="border: 2px dashed #00a0cc; border-radius: 4px">
 
-<div class="flex flex-row gap-2 m-t-2">
-  <div class="flex flex-col" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
-
-## Part 1: Learning & Discovery (1.5 hours)
+<details>
+  <summary class="p-b-4 text-xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">
+  Part 1: Learning & Discovery (1.5 hours)
+  </summary>
 
 ### v2 vs v3
 
@@ -27,10 +29,15 @@ Following our comparative overview, we'll conduct a thorough exploration of vers
 
 Part 1 concludes with a comprehensive demonstration where we'll showcase the features in action. This live demo will illustrate real-world implementation scenarios and demonstrate best practices for feature utilization.
 
-  </div>
-  <div class="flex flex-col flex-50" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
+</details>
 
-## Part 2: Hands-On Experience (1.5 hours)
+  </div>
+  <div class="flex flex-col flex-45 p-8" style="border: 2px dashed #00a0cc; border-radius: 4px">
+
+<details>
+  <summary class="p-b-4 text-xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">
+  Part 2: Hands-On Experience (1.5 hours)
+  </summary>
 
 ### Interactive testing
 
@@ -40,5 +47,6 @@ In our second session, you'll have direct access to a testing environment where 
 
 Throughout the hands-on portion, our expert facilitators will be available to answer questions, provide guidance, and help troubleshoot any challenges you encounter. This interactive format ensures you leave with confidence in using the new system.
 
+</details>
   </div>
 </div>
