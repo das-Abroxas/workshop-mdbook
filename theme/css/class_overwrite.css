@@ -35,7 +35,10 @@ h3 { margin-block-start: 1em; }
 
 .flex-15 { flex: 0 0 15%; max-width: 15%; }
 .flex-20 { flex: 0 0 20%; max-width: 20%;}
-.flex-25 { flex: 1 0 25%; }
+.flex-25 { flex: 0 0 25%; max-width: 25%;}
+.flex-30 { flex: 0 0 30%; max-width: 30%;}
+.flex-35 { flex: 0 0 35%; max-width: 35%;}
+.flex-40 { flex: 0 0 40%; max-width: 40%;}
 .flex-45 { flex: 0 0 45%; max-width: 45%; }
 .flex-50 { flex: 1 0 50%; }
 .flex-60 { flex: 1 0 60%; }
@@ -84,6 +87,8 @@ h3 { margin-block-start: 1em; }
 .m-b-8 { margin-bottom: calc(var(--spacing)*8) }
 .m-b-12 { margin-bottom: calc(var(--spacing)*12) }
 .m-b-24 { margin-bottom: calc(var(--spacing)*24) }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
 
 .m-y-2 { margin-top: calc(var(--spacing)*2); margin-bottom: calc(var(--spacing)*2); }
 .m-y-4 { margin-top: calc(var(--spacing)*4); margin-bottom: calc(var(--spacing)*4) }
