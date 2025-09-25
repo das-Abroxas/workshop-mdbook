@@ -12,10 +12,24 @@
     --links: #00a0cc;
     --sidebar-active: #00a0cc;
     --sidebar-spacer: #00a0cc;
+    --line-nums: rgba(226, 228, 233, 0.56);
 }
 
 .navy {
     --links: #00a0cc;
     --sidebar-active: #00a0cc;
     --sidebar-spacer: #00a0cc;
+    --line-nums: rgba(226, 228, 233, 0.56);
+}
+
+.light {
+    --line-nums: rgba(0, 0, 0, 0.54);
+}
+
+.rust {
+    --line-nums: rgba(0, 0, 0, 0.54);
+}
+
+.coal {
+    --line-nums: rgba(226, 228, 233, 0.56);
 }
