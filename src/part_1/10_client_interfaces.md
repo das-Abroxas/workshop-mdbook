@@ -1,4 +1,4 @@
-# Client interfaces (UI)
+# Client interface (UI)
 
 
 

@@ -3,10 +3,11 @@
 <div class="flex flex-row gap-2 m-t-2 m-b-12">
   <div class="flex flex-col flex-50 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
-  <ul class="" style="">
+  <ul class="text-3xl" style="">
     <li>P2P network</li>
-    <li>Kademlia</li>
-    <li>Automerge / CRDTs</li>
+    <li>Kademlia to store/distribute data locations</li>
+    <li>Automerge / CRDTs to store/distribute metadata</li>
+    <li>Gossip for info sync (epidemic)</li>
   </ul>
 
   </div>
@@ -18,7 +19,7 @@
 </div>
 
 <details>
-  <summary class="highlight font-bold" style="font-size:xx-large; margin-bottom: 10px; ">More info</summary>
+  <summary class="w-30 m-t-24 m-b-12 p-b-8 text-2xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">More info</summary>
 
   <div class="flex flex-col text-xl" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
