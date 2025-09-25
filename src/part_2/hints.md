@@ -6,19 +6,25 @@ In any case, you should join the `OpenWRT` network, which we have set up especia
 
 ---
 
-## Join the Realm as User and distribute data
+## Experiment with a local cluster on your laptop
 
 - Some commands with explanation
 
 ---
 
-## Join the Realm as Node and be a vital part of the federated network
+## Join the workshop Realm as User and distribute data
 
 - Some commands with explanation
 
 ---
 
-## Join forces with some allies and create your own realm
+## Join the workshop Realm as Node and be a vital part of the federated network
+
+- Some commands with explanation
+
+---
+
+## Join forces with some allies and create your own Realm
 
 - Some commands with explanation
 
