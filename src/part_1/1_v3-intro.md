@@ -7,7 +7,7 @@
 
 <!-- More Info -->
 <details>
-  <summary class="w-30 m-t-24 m-b-12 p-b-8 text-2xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">More Info</summary>
+  <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">More Info</summary>
 
 <div class="aruna-border rounded-4 p-8 text-xl">
   Aruna v3 represents a fundamental shift from the centralized architecture of v2 to a fully federated system where nodes communicate directly without requiring central coordination components. The previous multi-service deployment model has been consolidated into a single unified service that handles all deployment scenarios, from institutional data storage proxy access to compute cluster integration and temporary personal research nodes. Close to Aruna v2's distributed management approach, each v3 node maintains responsibility solely for its own data but now intelligently forwards requests to appropriate nodes within the network if it self does not have the requested  resource. This architectural redesign expands storage backend compatibility and introduces logical compartmentalization through Realms for nodes and Groups for users, creating structured organizational layers for governance within the federated ecosystem.

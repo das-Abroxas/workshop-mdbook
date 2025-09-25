@@ -7,7 +7,7 @@
 
 <!-- More Info -->
 <details>
-  <summary class="w-30 m-t-24 m-b-12 p-b-8 text-2xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">More Info</summary>
+  <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">More Info</summary>
 
 <div class="aruna-border rounded-4 p-8 text-xl">
   Aruna is a distributed, cloud-native data orchestration engine developed in partnership of NFDI4Microbiota, NFDI4Biodiversity and the late FAIR Data Spaces project. The system provides unified access to heterogeneous data sources through an S3-compatible interface, enabling standardized data interaction across diverse storage backends and independent infrastructures. Aruna supports flexible deployment models that allow individual institutions to retain local data governance while contributing to a broader federated ecosystem. The platform includes a public search index for dataset discovery and implements automated data processing through its Hook feature, streamlining research workflows and reducing manual overhead.

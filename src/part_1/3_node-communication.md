@@ -19,7 +19,7 @@
 </div>
 
 <details>
-  <summary class="w-30 m-t-24 m-b-12 p-b-8 text-2xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">More info</summary>
+  <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">More info</summary>
 
   <div class="flex flex-col text-xl" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
