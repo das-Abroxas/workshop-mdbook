@@ -5,9 +5,9 @@
 
   <ul class="text-3xl" style="">
     <li>P2P network</li>
-    <li>Kademlia to store/distribute data locations</li>
-    <li>Automerge / CRDTs to store/distribute metadata</li>
-    <li>Gossip for info sync (epidemic)</li>
+    <li>DHT to make data/metadata available to the network</li>
+    <li>CRDTs are used for collaborative metadata editing</li>
+    <li>Data and Metadata can be shared and replicated with other Nodes</li>
   </ul>
 
   </div>
@@ -23,9 +23,14 @@
 
   <div class="flex flex-col text-xl" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  Nodes are connected via a P2P network and are organized into realms that share the same set of
+  policies and rules. When data/metadata is registered at a node, it gets distributed via a
+  DHT so every other node can associate a metadata/data entry with a node address. This guarantees a
+  distributed system, where every resource is **findable** while still being managed and
+  **access-controlled** by the original data holder. Nodes inside the same realm trust each other and
+  can share resources by default with another (based on realm policies). Collaborative
+  editing of metadata is made possible by CRDTs which asynchronously manage edits on metadata in our
+  P2P system.
 
   </div>
 </details>

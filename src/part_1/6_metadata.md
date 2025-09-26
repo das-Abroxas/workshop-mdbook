@@ -9,7 +9,14 @@
       <li>Base metadata standard: Schema.org</li>
       <li>Uses Dublin Core term `conformsTo`</li>
     </ul>
-    <li>Metadata modifications are distributed via CRDTs/AutoMerge to other Nodes</li>
+    <li>Collaborative work on metadata is handled by CRDTs</li>
+    <li>Linked meta/data relations allow for scalibility, beyond conventional databases</li>
+    <li>Detailed version history for every action on metadata</li>
+    <li>Every metadata object is searchable via a distributed search index in each realm</li>
+    <li>Authorized distributed search of metadata contents</li>
+    <!---
+    <li>Disclaimer: RO-crate support not ready yet</li>
+    --->
   </ul>
 
   </div>
@@ -24,10 +31,23 @@
   <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">More info</summary>
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
-
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  The basis of metadata is the json-based [RO-Crate standard](https://www.researchobject.org/ro-crate/specification/1.2/index.html).
+  This means that every metadata object must adhere to the [schema.org](https://schema.org/) standard. These standards enable 
+  more flexiblity on nearly every point compared to version 2. 
+  This for example allows for:
+    - One metadata definition collecting multiple data entries
+    - One metadata definition collection other metadata definitions
+    - Distributed linked metadata
+    - inclusion of descriptions for non-aruna metadata links
+  Collaborative editing of metadata is handled by CRDTs, allow for flexible asynchronous merging of
+  changing actions. Every change results in a new version that gets collected in a version history.
+  Each change not only includes the resulting action, but also the user that triggered the change,
+  the node that executed the change and the realm where the action took place in.
+  Because metadata can now contain metadata that is located at other nodes or even realms,
+  the distribution of metadata and data becomes easier than before.
+  This not only allows for much higher scaliblity than version 2, allowing for example
+  the integration of massive databases inside the p2p-aruna system, but also giving researchers the
+  possibility to store data on a **resilient** federated system.
 
   </div>
 </details>

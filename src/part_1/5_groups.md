@@ -4,9 +4,14 @@
   <div class="flex flex-col flex-50 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="" style="">
-    <li>Manages permissions</li>
-    <li>Individual permissions per role</li>
-    <li>Currently only predefined roles; custom roles possible in the future</li>
+    <li>Form the basis of every auth-based action in a realm</li>
+    <li>Organize users, resources and permissions</li>
+    <li>Role-based permission handling</li>
+    <li>Users can request access or can be added by group administrators</li>
+    <!----
+    <li>Disclaimer: Currently only predefined roles</li>
+    <li>Disclaimer: Currently adding by admins</li>
+    --->
   </ul>
 
   </div>
@@ -22,9 +27,12 @@
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  Groups are used to organize users and permissions and form the basis of
+  access-control and permission management for resources. Users can be part of one or
+  multiple groups and are added by group admins or can request access to specific groups. 
+  Every user can get assigned to one or more roles that represent permissions. These
+  permissions can be assigned for example to only permit individual resources or allow only metdata or data management.
+  This allows for a flexible, fine-grained authorization system.
 
   </div>
 </details>

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This exclusive preview workshop combines structured learning with early access testing, ensuring you gain both theoretical understanding of upcoming changes and practical experience with pre-release features. Whether you're currently using version 2 or planning to implement our product for the first time, you'll develop advance knowledge that will give you a significant advantage when version 3 officially launches.
+This exclusive preview workshop combines structured learning with early access testing, ensuring you gain both theoretical understanding of upcoming changes and practical experience with pre-release features. Whether you're currently using version 2 or planning to implement our product for the first time, you'll develop advanced knowledge that will give you a significant advantage when version 3 officially launches.
 
 We're excited to share this sneak peek with you and gather your insights to help shape the featureset draft.
 

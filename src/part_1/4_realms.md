@@ -4,7 +4,7 @@
   <div class="flex flex-col flex-40 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="text-2xl" style="">
-    <li>Logical group of participating nodes</li>
+    <li>A layer of trust between Nodes</li>
     <ul><li>Nodes with same private key form a realm</li></ul>
     <li>Can employ their own policies for data/metadata, etc.</li>
     <li>User Identity is always bound to a Realm</li>
@@ -23,9 +23,18 @@
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  Because realms share the same cryptographic key, nodes participating in realms trust each other.
+  This ensures that a set of defined Nodes uses the same rules for authorization, authentication,
+  policies and rules for metadata and data replication. By default access relevant information is
+  shared with every other node in a realm. Data and metadata can be replicated by default to nodes
+  inside a realm, while manual replication is still possibly with other nodes from other realms, but
+  without the guarantee to use the same access restrictions. This flexible approach guarantees a
+  **resilient** data storage system, where data and metadata can be dynamically transferred.
+  Policies can for example, define how access should be managed or how data should be replicated.
+  Rules can define which metadata standards need to be enforced or which fields need to be set on
+  metadata, so that consistent metadata handling is ensured in a realm. Users that are registered in
+  a realm can interact with other realms via the identity provider used by their home-realm,
+  supporting interoperability between nodes and realms.
 
   </div>
 </details>
