@@ -24,14 +24,14 @@
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
 
   Because realms share the same cryptographic key, nodes participating in realms trust each other.
-  This ensures that a set of defined Nodes uses the same rules for authorization, authentication,
-  policies and rules for metadata and data replication. By default access relevant information is
+  This ensures that a set of defined Nodes uses the same policies for authorization, authentication,
+  metadata handling and data replication. By default access relevant information is
   shared with every other node in a realm. Data and metadata can be replicated by default to nodes
   inside a realm, while manual replication is still possibly with other nodes from other realms, but
   without the guarantee to use the same access restrictions. This flexible approach guarantees a
   **resilient** data storage system, where data and metadata can be dynamically transferred.
-  Policies can for example, define how access should be managed or how data should be replicated.
-  Rules can define which metadata standards need to be enforced or which fields need to be set on
+  Policies can for example, define how access should be managed, how data should be replicated,
+  which metadata standards need to be enforced or which fields need to be set on
   metadata, so that consistent metadata handling is ensured in a realm. Users that are registered in
   a realm can interact with other realms via the identity provider used by their home-realm,
   supporting interoperability between nodes and realms.

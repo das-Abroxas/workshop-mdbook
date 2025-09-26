@@ -4,9 +4,11 @@
   <div class="flex flex-col flex-40 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="text-2xl" style="">
+    <!-- <li>Disclaimer: Unimplemented</li> -->
     <li>Interface to integrate external service</li>
     <li>TES compliant</li>
-    <li></li>
+    <li>Are triggered based on resource actions</li>
+    <li>Can be associated with locality information and enriched by metadata</li>
   </ul>
 
   </div>

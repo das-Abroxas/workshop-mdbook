@@ -24,7 +24,7 @@
   <div class="flex flex-col text-xl" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   Nodes are connected via a P2P network and are organized into realms that share the same set of
-  policies and rules. When data/metadata is registered at a node, it gets distributed via a
+  policies. When data/metadata is registered at a node, it gets distributed via a
   DHT so every other node can associate a metadata/data entry with a node address. This guarantees a
   distributed system, where every resource is **findable** while still being managed and
   **access-controlled** by the original data holder. Nodes inside the same realm trust each other and

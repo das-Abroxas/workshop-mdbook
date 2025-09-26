@@ -4,10 +4,11 @@
   <div class="flex flex-col p-x-6 aruna-border rounded-4 text-2xl justify-center">
 
   <ul class="">
-    <li>Realm-wide policies</li>
-    <li>Node specific policies</li>
-    <li></li>
-    <li></li>
+    <!-- <li>Disclaimer: Unimplemented</li> -->
+    <li>Basic build blocks for the different layers of trust</li>
+    <li>Define which actions are allowed on which resources</li>
+    <li>Can be defined realm wide or node specific</li>
+    <li>Are programmatically evaluated</li>
   </ul>
 
   </div>
@@ -23,9 +24,16 @@
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  Policies form the basis of autonomy for each resource and node. They define what needs to be done
+  or what is permitted on specific resources and can be integrated on a resource, group, node or
+  realm level. These form the building block of the different layers of trust inside a p2p network.
+  Because different institutions or consortia have different constraints, a defined set of policies
+  is defined for each realm. This can include replication policies for data or metadata and policies
+  that deny for example specific actions for specific nodes. The resulting flexiblity allows for 
+  example differentiation between higher-trust nodes, included in access-constrained compute
+  environments that still can participate in a realm and the p2p network. Programmatic definition
+  allows for maximum flexibility at the definition level and ensures that even complex scenarios are
+  covered.
 
   </div>
 </details>
