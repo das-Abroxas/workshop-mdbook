@@ -4,9 +4,9 @@
   <div class="flex flex-col flex-40 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="text-2xl" style="">
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Realm-wide websites as an interface to all nodes</li>
+    <li>Local UI for temporary, local nodes</li>
+    <li>CLI tool to work with remote as well as local instances</li>
   </ul>
 
   </div>
@@ -22,9 +22,13 @@
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  Similar to arunas version 2, a website is planned to lower the entry barrier for participants in
+  the p2p network. Each realm can deploy a webservice, that interacts with all realm nodes, creating
+  streamlined convenient interface to interact with realms. A local UI system is planned, similar to
+  dropbox or torrenting managers, that help individual researchers to momentarily participate in the
+  p2p network, to for example synchronize resources changes with remote nodes or share files with
+  other individual researchers temporarily. To adress scripting and workflow execution, a CLI tool
+  will be developed to help automate and script interactions with the p2p system.
 
   </div>
 </details>

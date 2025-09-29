@@ -8,7 +8,8 @@
     <li>Interface to integrate external service</li>
     <li>TES compliant</li>
     <li>Are triggered based on resource actions</li>
-    <li>Can be associated with locality information and enriched by metadata</li>
+    <li>Associated with locality information</li>
+    <li>Enriched with metadata context</li>
   </ul>
 
   </div>
@@ -24,9 +25,13 @@
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+  With hooks users can define actions that can trigger task execution of external TES services.
+  Within the p2p network, specific nodes can be associated with specific compute resources, that can
+  automatically trigger workflow executions. This powerful integration can efficiently route
+  workflow jobs to the nearest compute resource to allow for data-to-compute patterns. Each job can
+  be enriched with metadata information coming from the triggering resource action, helping to not
+  only enrich metadata and data with provencance information, but also helping workflows to carry
+  metadata information to external services.
 
   </div>
 </details>
