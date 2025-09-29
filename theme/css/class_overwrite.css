@@ -41,9 +41,9 @@ h3 { margin-block-start: 1em; }
 .flex-30 { flex: 0 0 30%; max-width: 30%;}
 .flex-35 { flex: 0 0 35%;}
 .flex-40 { flex: 0 0 40%; max-width: 40%;}
-/*.flex-45 { flex: 0 0 45%; max-width: 45%; }*/
 .flex-45 { flex: 1 0 45%; }
 .flex-50 { flex: 1 0 50%; }
+.flex-55 { flex: 0 0 55%; }
 .flex-60 { flex: 1 0 60%; }
 .flex-75 { flex: 1 0 75%; }
 

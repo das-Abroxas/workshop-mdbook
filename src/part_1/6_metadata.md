@@ -1,7 +1,7 @@
 # Metadata
 
 <div class="flex flex-row gap-2 m-t-2 m-b-12">
-  <div class="flex flex-col flex-40 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
+  <div class="flex flex-col flex-60 rounded-4 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc">
 
   <ul class="text-2xl" style="">
     <li>Metadata is stored as RO-Crate</li>
@@ -18,11 +18,11 @@
     <li>Disclaimer: RO-crate support not ready yet</li>
     --->
   </ul>
-
   </div>
-  <div class="flex flex-col flex-50" style="padding: 0 15px;">
+
+  <div class="flex flex-col justify-center" style="padding: 0 15px;">
     <p align="center">
-      <img src="../assets/images/metadata.drawio.png"/>
+      <img src="../assets/images/node_comm_.drawio.png"/>
     </p>
   </div>
 </div>
@@ -31,14 +31,17 @@
   <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">More info</summary>
 
   <div class="flex flex-col aruna-border rounded-8 p-x-8 text-xl">
+
   The basis of metadata is the json-based [RO-Crate standard](https://www.researchobject.org/ro-crate/specification/1.2/index.html).
   This means that every metadata object must adhere to the [schema.org](https://schema.org/) standard. These standards enable 
   more flexiblity on nearly every point compared to version 2. 
+
   This for example allows for:
-    - One metadata definition collecting multiple data entries
-    - One metadata definition collection other metadata definitions
-    - Distributed linked metadata
-    - inclusion of descriptions for non-aruna metadata links
+  - One metadata definition collecting multiple data entries
+  - One metadata definition collection other metadata definitions
+  - Distributed linked metadata
+  - inclusion of descriptions for non-aruna metadata links
+
   Collaborative editing of metadata is handled by CRDTs, allow for flexible asynchronous merging of
   changing actions. Every change results in a new version that gets collected in a version history.
   Each change not only includes the resulting action, but also the user that triggered the change,

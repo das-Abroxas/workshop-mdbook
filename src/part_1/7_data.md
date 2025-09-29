@@ -1,7 +1,7 @@
 # Data
 
 <div class="flex flex-row gap-2 m-t-2 m-b-12">
-  <div class="flex flex-col flex-40 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
+  <div class="flex flex-col flex-60 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="text-2xl" style="">
     <li>S3 compatible interface for easy up- and download</li>
@@ -16,9 +16,9 @@
   </ul>
 
   </div>
-  <div class="flex flex-col flex-50" style="padding: 0 15px;">
+  <div class="flex flex-col justify-center" style="padding: 0 15px;">
     <p align="center">
-      <img src="../assets/images/data.drawio.png"/>
+      <img src="../assets/images/node_comm_.drawio.png"/>
     </p>
   </div>
 </div>

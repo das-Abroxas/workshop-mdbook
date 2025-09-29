@@ -4,15 +4,20 @@
   <div class="flex flex-col flex-40 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc; border-radius: 4px">
 
   <ul class="text-2xl" style="">
-    <li>Realm-wide websites as an interface to all nodes</li>
-    <li>Local UI for temporary, local nodes</li>
-    <li>CLI tool to work with remote as well as local instances</li>
+    <li>One client cross-compiled for all devices</li>
+    <ul>
+      <li>Realm-wide websites as an interface to all nodes</li>
+      <li>Local UI for temporary, local nodes</li>
+      <li>CLI tool to work with remote as well as local instances</li>
+      <li>...</li>
+    </ul>
+    <li>Provides convenience functionality</li>
   </ul>
 
   </div>
-  <div class="flex flex-col flex-50" style="padding: 0 15px;">
+  <div class="flex flex-col" style="padding: 0 15px;">
     <p align="center">
-      <img src="../assets/images/ui.drawio.png"/>
+      <img src="../assets/images/ui.png"/>
     </p>
   </div>
 </div>
@@ -32,12 +37,3 @@
 
   </div>
 </details>
-
-
-## Notes:
-
-- Single Aruna client for all devices
-  - Global website to generally interact with the Aruna ecosystem
-  - Executable for personal devices (PC, Laptop, Tablet, ...)
-
-- Convenience functionality

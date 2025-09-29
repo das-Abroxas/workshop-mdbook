@@ -7,7 +7,7 @@
     <!-- <li>Disclaimer: Unimplemented</li> -->
     <li>Interface to integrate external service</li>
     <li>TES compliant</li>
-    <li>Are triggered based on resource actions</li>
+    <li>Triggers based on resource actions</li>
     <li>Associated with locality information</li>
     <li>Enriched with metadata context</li>
   </ul>
@@ -15,7 +15,7 @@
   </div>
   <div class="flex flex-col flex-50" style="padding: 0 15px;">
     <p align="center">
-      <img src="../assets/images/realms.drawio.png"/>
+      <img src="../assets/images/hooks.drawio.png"/>
     </p>
   </div>
 </div>
@@ -35,10 +35,3 @@
 
   </div>
 </details>
-
-
-## Notes:
-
-- 
-- 
-- 
