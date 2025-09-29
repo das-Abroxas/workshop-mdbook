@@ -19,7 +19,7 @@
 
 ### v2 vs v3
 
-We'll begin by examining the fundamental differences between versions 2 and 3, highlighting what has changed, what has been enhanced, and what new capabilities have been introduced. This comparison will provide crucial context for understanding the evolution of our product and help you identify migration considerations.
+We'll begin by examining the differences between Aruna versions 2 and 3, recapping v2, highlighting what has changed, and what new capabilities have been introduced. This comparison will provide context for understanding the evolution of Aruna evolved and help you identify migration considerations.
 
 ### Feature Deep Dive
 
@@ -27,7 +27,7 @@ Following our comparative overview, we'll conduct a thorough exploration of vers
 
 ### Live Demonstration
 
-Part 1 concludes with a comprehensive demonstration where we'll showcase the features in action. This live demo will illustrate real-world implementation scenarios and demonstrate best practices for feature utilization.
+Part 1 concludes with a comprehensive demonstration where we'll showcase the features in action.
 
 </details>
 
@@ -41,11 +41,11 @@ Part 1 concludes with a comprehensive demonstration where we'll showcase the fea
 
 ### Interactive testing
 
-In our second session, you'll have direct access to a testing environment where you can experiment with version 3 features firsthand. This practical component allows you to explore functionalities at your own pace and discover how they apply to your specific needs.
+In our second session, you'll have direct access to a testing environment where you can experiment with version 3 features firsthand. This practical component allows you to explore and discover the functionalities at your own pace.
 
 ### Q&A and Discussion
 
-Throughout the hands-on portion, our expert facilitators will be available to answer questions, provide guidance, and help troubleshoot any challenges you encounter. This interactive format ensures you leave with confidence in using the new system.
+Throughout the hands-on portion, we will be available to answer questions, provide guidance, and help troubleshoot any challenges you encounter. This interactive format ensures you leave with confidence in using the new system.
 
 </details>
   </div>

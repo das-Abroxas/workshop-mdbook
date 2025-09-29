@@ -112,7 +112,7 @@
         <h2 class="font-bold text-3xl" style="margin: 0;">Agnostic</h2>
       </div>
       <p class="text-xl text-center">
-        Manage unlimited volumes of heterogeneous data and metadata without domain constraints.
+        Manage unlimited volumes of heterogeneous data without domain constraints.
       </p>
       <a href="../part_1/2_nodes.md" class="text-xl font-bold">READ MORE >></a>
     </div>
