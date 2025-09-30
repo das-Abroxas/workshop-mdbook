@@ -455,7 +455,10 @@ curl -d '
     <div class="flex flex-col">
   
   ### Create a new metadata project
-  <p class="m-t-0">A metadata </p>
+  <p class="m-t-0">A metadata project is the root ro-crate for a metadata collection. There is no
+    need to create nested resources, because multiple datasets cann be added and
+    annotated in one single metadata resource. Nesting is still possible to further
+    structure your metadata or to scale things up if metadata gets large.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
@@ -556,7 +559,7 @@ curl -X 'POST' \
     <div class="flex flex-col">
   
   ### Create a new metadata resource
-  <p class="m-t-0">New metadata resources can be created at the </p>
+  <p class="m-t-0">Nested metadata resources can be appended to already existing metadata projects.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
@@ -657,7 +660,8 @@ curl -X 'POST' \
   <div class="flex flex-col">
   
   ### Get info of an existing metadata resource
-  <p class="m-t-0">Lorem Ipsum Dolor</p>
+  <p class="m-t-0">Any metadata object can be queried from any node with a simple get request and
+    the resource id.</p>
   </div>
   
   <div class="flex flex-row gap-12">
@@ -731,7 +735,8 @@ curl -X 'POST' \
   <div class="flex flex-col">
   
   ### Get change history of a metadata resource
-  <p class="m-t-0">Lorem Ipsum Dolor</p>
+  <p class="m-t-0">The change history of every action that was called on a specific resource can be
+    displayed with a query in the history endpoint.</p>
   </div>
   
   <div class="flex flex-row gap-12">
@@ -787,7 +792,8 @@ curl -X 'POST' \
   <div class="flex flex-col">
   
   ### Update title of a metadata resource
-  <p class="m-t-0">Lorem Ipsum Dolor</p>
+  <p class="m-t-0">Metadata fields are currently updated with a specfic endpoint for each field.
+    This will change over time to allow for more flexible json-based metadata edits</p>
   </div>
   
   <div class="flex flex-row gap-12">
@@ -802,7 +808,7 @@ curl -X 'POST' \
     }' \
     -H 'accept: application/json' \
     -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
+    -X POST 'http://<node-host>:8081/api/v3/resources/title'
   ```
 
   </div>
@@ -981,7 +987,9 @@ curl -X 'POST' \
 <div class="flex flex-col">
 
 ### Get data locations
-<p class="m-t-0">Lorem Ipsum Dolor</p>
+<p class="m-t-0">Existing data locations can be queried by their respective content-hashes.
+  In a flexible p2p system like aruna this is especially useful to automate actions based on
+  resource locality.</p>
 </div>
 
 <div class="flex flex-row gap-12">
@@ -1024,7 +1032,9 @@ curl -X 'POST' \
 <div class="flex flex-col">
 
 ### Register data from storage backend
-<p class="m-t-0">Lorem Ipsum Dolor</p>
+<p class="m-t-0">Existing data sources you have access to can be registered via this endpoint. This
+    currelntly only works for individual objects, but gets further extended in the
+    future.</p>
 </div>
 
 <div class="flex flex-row gap-12">
