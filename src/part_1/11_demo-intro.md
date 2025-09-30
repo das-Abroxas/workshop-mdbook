@@ -443,6 +443,33 @@ curl -d '
 <details>
   <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">Resources Endpoint</summary>
 
+  <!-- Create Credentials -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+    <div class="flex flex-col">
+
+  ### Create s3 credentials 
+  <p class="m-t-0">S3 Credentials for a user are always group specific.</p>
+    </div>
+    <div class="flex flex-row gap-12">
+      <div class="flex flex-col flex-35">
+        <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```sh
+  ```
+  </div>
+  <div class="flex flex-45 scroll">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```json
+  {
+  }
+  ```
+  </details>
+  </div>
+  </div>
+  </div>
+  <!-- Add Group End -->
 
 </details>
 <!-- Resources Endpoint End -->
