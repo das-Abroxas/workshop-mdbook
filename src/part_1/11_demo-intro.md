@@ -28,8 +28,9 @@
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  curl -H 'accept: application/json' \
-       -X GET 'http://localhost:8081/api/v3/info'
+curl -H 'accept: application/json' \
+  -H 'Authorization: Bearer <your-secret-token>' \
+  -X GET 'http://<node-host>:8081/api/v3/info'
   ```
   </div>
 
@@ -73,7 +74,8 @@
 
   ```bash
   curl -H 'accept: application/json' \
-       -X GET 'http://<node-host>/api/v3/info/realm'
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>/api/v3/info/realm'
   ```
   </div>
 
@@ -147,7 +149,8 @@
 
   ```bash
   curl -H 'accept: application/json' \
-       -X 'GET' 'http://localhost:8081/api/v3/info/search?query=ecoli'
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X 'GET' 'http://<node-host>:8081/api/v3/info/search?query=ecoli'
   ```
   </div>
 
@@ -235,9 +238,10 @@
     {
       "name": "Jannis Schlegel"
     }' \
-       -H 'accept: application/json' \
-       -H 'Content-Type: application/json' \
-       -X POST 'http://localhost:8081/api/v3/users'       
+    -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -H 'Content-Type: application/json' \
+    -X POST 'http://<node-host>:8081/api/v3/users'       
   ```
   </div>
   <div class="flex flex-45">
@@ -275,9 +279,10 @@
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
   curl -H 'accept: application/json' \
-       -X GET 'http://localhost:8083/api/v3/users?id={user-identity}'
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>:8083/api/v3/users?id={user-identity}'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -315,14 +320,15 @@
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
   curl -d '
     {
       "name": "my_group"
     }' \
-       -H 'accept: application/json' \
-       -H 'Content-Type: application/json' \
-       -X POST 'http://localhost:8081/api/v3/groups'
+    -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -H 'Content-Type: application/json' \
+    -X POST 'http://<node-host>:8081/api/v3/groups'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -364,10 +370,10 @@
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
   curl -H 'accept: application/json' \
-       -H 'Authorization: Bearer \
-       -X GET 'http://localhost:8081/api/v3/groups?id=01K60DD03CHA6ZZ3T01NDDPXN0'
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>:8081/api/v3/groups?id=01K60DD03CHA6ZZ3T01NDDPXN0'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -409,7 +415,7 @@
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
 curl -d '
   {
     "group_id": "01K60DD03CHA6ZZ3T01NDDPXN0",
@@ -418,10 +424,10 @@ curl -d '
         "01K60DQTQSSW6CT7V6254XR91P@b4e63113c8f2d85f743841abecd8b10a873aa43207306d86c212967c9a8c1900"
       ]
     }' \
-     -H 'accept: application/json' \
-     -H 'Authorization: Bearer <your-secret-token>' \
-     -H 'Content-Type: application/json' \
-     -X POST 'http://localhost:8081/api/v3/groups/user'
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer <your-secret-token>' \
+  -H 'Content-Type: application/json' \
+  -X POST 'http://<node-host>:8081/api/v3/groups/user'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -444,56 +450,55 @@ curl -d '
 <details>
   <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">Resources Endpoint</summary>
 
-  <!-- Create Resource -->
+  <!-- Create Project -->
   <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
-  <div class="flex flex-col">
+    <div class="flex flex-col">
   
-  ### Create a new metadata resource
-  <p class="m-t-0">Lorem Ipsum Dolor</p>
-  </div>
-  
-  <div class="flex flex-row gap-12">
-    <div class="flex flex-col flex-35">
-  
-    <p class="m-y-0 font-bold highlight">Request</p>
-  
-    ```json
-    curl -d '
-      {
-        "authors": [
-          {
-            "id": "string",
-            "first": "string",
-            "last": "string"
-          }
-        ],
-        "description": "string",
-        "identifiers": [
-          "string"
-        ],
-        "labels": [
-          {
-            "key": "string",
-            "value": "string"
-          }
-        ],
-        "license_id": "string",
-        "name": "string",
-        "parent_id": "string",
-        "title": "string",
-        "variant": "Folder",
-        "visibility": "Public"
-      }' \
-         -H 'accept: application/json' \
-         -X POST 'http://localhost:8081/api/v3/resources'
-    ```
+  ### Create a new metadata project
+  <p class="m-t-0">A metadata </p>
     </div>
-  
+    <div class="flex flex-row gap-12">
+      <div class="flex flex-col flex-35">
+        <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+curl -X 'POST' \
+  'http://<node-host>:8081/api/v3/resources/project' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer <your-secret-token>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "authors": [
+    {
+      "first": "string",
+      "id": "string",
+      "last": "string"
+    }
+  ],
+  "description": "string",
+  "group_id": "string",
+  "identifiers": [
+    "string"
+  ],
+  "labels": [
+    {
+      "key": "string",
+      "value": "string"
+    }
+  ],
+  "license_id": "string",
+  "name": "string",
+  "title": "string",
+  "visibility": "Public"
+}'
+  ```
+
+  </div>
     <div class="flex flex-45">
       <details>
         <summary class="font-bold highlight">Response</summary>
   
-    ```json
+  ```json
     {
       "resource": {
         "id": "string",
@@ -538,9 +543,111 @@ curl -d '
         ],
       }
     }
-    ```
-    </details>
+  ```
+
+  </details>
+  </div>
+  </div>
+  </div>
+  <!-- Create Resource End -->
+
+  <!-- Create Resource -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+    <div class="flex flex-col">
+  
+  ### Create a new metadata resource
+  <p class="m-t-0">New metadata resources can be created at the </p>
     </div>
+    <div class="flex flex-row gap-12">
+      <div class="flex flex-col flex-35">
+        <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+  curl -d '
+    {
+      "authors": [
+        {
+          "id": "string",
+          "first": "string",
+          "last": "string"
+        }
+      ],
+      "description": "string",
+      "identifiers": [
+        "string"
+      ],
+      "labels": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ],
+      "license_id": "string",
+      "name": "string",
+      "parent_id": "string",
+      "title": "string",
+      "variant": "Folder",
+      "visibility": "Public"
+    }' \
+    -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X POST 'http://<node-host>:8081/api/v3/resources'
+  ```
+
+  </div>
+    <div class="flex flex-45">
+      <details>
+        <summary class="font-bold highlight">Response</summary>
+  
+  ```json
+    {
+      "resource": {
+        "id": "string",
+        "name": "string",
+        "title": "string",
+        "description": "string",
+        "revision": 0,
+        "variant": "Project",
+        "visibility": "Public",
+        "content_len": 123456,
+        "count": 0,
+        "created_at": "2025-09-29T06:47:25.047Z",
+        "last_modified": "2025-09-29T06:47:25.047Z",
+        "license_id": "string",
+        "locked": false,
+        "deleted": false,
+        "authors": [
+          {
+            "id": "string",
+            "first": "string",
+            "last": "string"
+          }
+        ],
+        "data": [
+          {
+            "ContentHash": {
+              "datahash": "string"
+            }
+          },
+          {
+            "Link": "string"
+          }
+        ],
+        "identifiers": [
+          "string"
+        ],
+        "labels": [
+          {
+            "key": "string",
+            "value": "string"
+          }
+        ],
+      }
+    }
+  ```
+
+  </details>
+  </div>
   </div>
   </div>
   <!-- Create Resource End -->
@@ -555,20 +662,19 @@ curl -d '
   
   <div class="flex flex-row gap-12">
     <div class="flex flex-col flex-35">
-  
     <p class="m-y-0 font-bold highlight">Request</p>
   
-    ```bash
-    curl -H 'accept: application/json' \
-         -X GET 'http://localhost:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
-    ```
-    </div>
-  
+  ```bash
+  curl -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
+  ```
+  </div>
     <div class="flex flex-45">
       <details>
         <summary class="font-bold highlight">Response</summary>
   
-    ```json
+  ```json
     {
       "resource": {
         "id": "string",
@@ -613,9 +719,9 @@ curl -d '
         ],
       }
     }
-    ```
-    </details>
-    </div>
+  ```
+  </details>
+  </div>
   </div>
   </div>
   <!-- Get Resource End -->
@@ -630,48 +736,48 @@ curl -d '
   
   <div class="flex flex-row gap-12">
     <div class="flex flex-col flex-35">
-  
     <p class="m-y-0 font-bold highlight">Request</p>
   
-    ```json
-    curl -H 'accept: application/json' \
-         -X GET 'http://localhost:8081/api/v3/resources/history?id=01K6AA6D7G48GNYMFD8G03QPWP'
-    ```
-    </div>
-  
+  ```bash
+  curl -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>:8081/api/v3/resources/history?id=01K6AA6D7G48GNYMFD8G03QPWP'
+  ```
+  </div>
     <div class="flex flex-45">
       <details>
         <summary class="font-bold highlight">Response</summary>
   
-    ```json
-    {
-      "history": [
-        {
-          "actor_id": {
-            "node_id": "string",
-            "realm_key": "string",
-            "user_identity": "string"
-          },
-          "deps": [
-            "string"
-          ],
-          "extra_bytes": [
-            1073741824
-          ],
-          "hash": "string",
-          "message": "string",
-          "operations": [
-            "string"
-          ],
-          "seq": 10,
-          "start_op": 9007199254740991,
-          "time": 9007199254740991
-        }
-      ]
-    }
-    ```
-    </details>
-    </div>
+  ```json
+  {
+    "history": [
+      {
+        "actor_id": {
+          "node_id": "string",
+          "realm_key": "string",
+          "user_identity": "string"
+        },
+        "deps": [
+          "string"
+        ],
+        "extra_bytes": [
+          1073741824
+        ],
+        "hash": "string",
+        "message": "string",
+        "operations": [
+          "string"
+        ],
+        "seq": 10,
+        "start_op": 9007199254740991,
+        "time": 9007199254740991
+      }
+    ]
+  }
+  ```
+
+  </details>
+  </div>
   </div>
   </div>
   <!-- Get Resource History End -->
@@ -686,72 +792,73 @@ curl -d '
   
   <div class="flex flex-row gap-12">
     <div class="flex flex-col flex-35">
-  
     <p class="m-y-0 font-bold highlight">Request</p>
   
-    ```json
-    curl -d '
-      {
-        "id": "01K6AA6D7G48GNYMFD8G03QPWP",
-        "title": "Some new title"
-      }' \
-         -H 'accept: application/json' \
-         -X GET 'http://localhost:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
-    ```
-    </div>
-  
-    <div class="flex flex-45">
-      <details>
-        <summary class="font-bold highlight">Response</summary>
-  
-    ```json
+  ```bash
+  curl -d '
     {
-      "resource": {
-        "id": "01K6AA6D7G48GNYMFD8G03QPWP",
-        "name": "string",
-        "title": "Some new title",
-        "description": "string",
-        "revision": 0,
-        "variant": "Project",
-        "visibility": "Public",
-        "content_len": 123456,
-        "count": 0,
-        "created_at": "2025-09-29T06:47:25.047Z",
-        "last_modified": "2025-09-29T06:47:25.047Z",
-        "license_id": "string",
-        "locked": false,
-        "deleted": false,
-        "authors": [
-          {
-            "id": "string",
-            "first": "string",
-            "last": "string"
+      "id": "01K6AA6D7G48GNYMFD8G03QPWP",
+      "title": "Some new title"
+    }' \
+    -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
+  ```
+
+  </div>
+  <div class="flex flex-45">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+  
+  ```json
+  {
+    "resource": {
+      "id": "01K6AA6D7G48GNYMFD8G03QPWP",
+      "name": "string",
+      "title": "Some new title",
+      "description": "string",
+      "revision": 0,
+      "variant": "Project",
+      "visibility": "Public",
+      "content_len": 123456,
+      "count": 0,
+      "created_at": "2025-09-29T06:47:25.047Z",
+      "last_modified": "2025-09-29T06:47:25.047Z",
+      "license_id": "string",
+      "locked": false,
+      "deleted": false,
+      "authors": [
+        {
+          "id": "string",
+          "first": "string",
+          "last": "string"
+        }
+      ],
+      "data": [
+        {
+          "ContentHash": {
+            "datahash": "string"
           }
-        ],
-        "data": [
-          {
-            "ContentHash": {
-              "datahash": "string"
-            }
-          },
-          {
-            "Link": "string"
-          }
-        ],
-        "identifiers": [
-          "string"
-        ],
-        "labels": [
-          {
-            "key": "string",
-            "value": "string"
-          }
-        ],
-      }
+        },
+        {
+          "Link": "string"
+        }
+      ],
+      "identifiers": [
+        "string"
+      ],
+      "labels": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ],
     }
-    ```
-    </details>
-    </div>
+  }
+  ```
+
+  </details>
+  </div>
   </div>
   </div>
   <!-- Update Resource Title End -->
@@ -772,9 +879,9 @@ curl -d '
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
   curl -X 'POST' \
-      'http://localhost:8080/api/v3/users/credentials' \
+      'http://<node-host>:8080/api/v3/users/credentials' \
       -H 'accept: application/json' \
       -H 'Authorization: Bearer <your-secret-token>' \
       -H 'Content-Type: application/json' \
@@ -811,10 +918,11 @@ curl -d '
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
   curl -X 'GET' \
-    'http://localhost:8080/api/v3/users/credentials' \
+    'http://<node-host>:8080/api/v3/users/credentials' \
     -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
     -H 'Content-Type: application/json' \
     -d '{}'
   ```
@@ -846,10 +954,11 @@ curl -d '
       <div class="flex flex-col flex-35">
         <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```sh
+  ```bash
   curl -X 'DELETE' \
-    'http://localhost:8080/api/v3/users/credentials' \
+    'http://<node-host>:8080/api/v3/users/credentials' \
     -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
     -H 'Content-Type: application/json' \
     -d '{}'
   ```
@@ -882,7 +991,8 @@ curl -d '
 
   ```bash
   curl -H 'accept: application/json' \
-       -X GET 'http://localhost:8080/api/v3/data/location?hash=ebae78bcd5a3ef259a4da35b3ac39ea29b8e147eb288c69404dd1bfa58280df4'
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -X GET 'http://<node-host>:8080/api/v3/data/location?hash=ebae78bcd5a3ef259a4da35b3ac39ea29b8e147eb288c69404dd1bfa58280df4'
   ```
   </div>
 
@@ -930,9 +1040,10 @@ curl -d '
       "group_id": "01K60DD03CHA6ZZ3T01NDDPXN0",
       "key": "<some-s3-key-id>"
     }' \
-       -H 'accept: application/json' \
-       -H 'Content-Type: application/json' \
-       -X POST http://localhost:8080/api/v3/users/credentials'
+    -H 'accept: application/json' \
+    -H 'Authorization: Bearer <your-secret-token>' \
+    -H 'Content-Type: application/json' \
+    -X POST http://<node-host>:8080/api/v3/users/credentials'
   ```
   </div>
 
