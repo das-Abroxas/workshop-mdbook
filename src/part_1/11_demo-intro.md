@@ -1075,3 +1075,46 @@ curl -X 'POST' \
 
 </details>
 <!-- Resources Endpoint End -->
+
+
+<!-- S3 Endpoint -->
+<details>
+  <!--<summary class="w-60 m-t-24 m-b-12 p-b-8 text-2xl font-bold" style="border-bottom: 2px solid var(--aruna-highlight)">Info Endpoint</summary>-->
+  <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">S3 Endpoint</summary>
+  <p class="text-xl">To interact with the s3 endpoint you need a s3 client. Our recommendation
+        for this demo is the official <a href="https://aws.amazon.com/cli/">aws cli</a>. Other
+        clients should work, but are not tested and most of them are not feature complete.
+  </p>
+
+<!-- Get Search -->
+<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+<div class="flex flex-col">
+
+  ### Uploading data
+<p class="m-t-0"></p>Uploading data 
+</div>
+
+<div class="flex flex-row gap-12">
+  <div class="flex flex-col flex-35">
+
+  <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+  ```
+  </div>
+
+  <div class="flex flex-45">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```json
+  {}
+  ```
+  </details>
+  </div>
+</div>
+</div>
+<!-- Get Search End -->
+
+</details>
+<!-- Info Endpoint End -->
