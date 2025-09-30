@@ -1086,13 +1086,13 @@ curl -X 'POST' \
         clients should work, but are not tested and most of them are not feature complete.
   </p>
 
-<!-- Get Search -->
+<!-- Create bucket -->
 <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
 <div class="flex flex-col">
 
-  ### Uploading data
-<p class="m-t-0"></p>Uploading data 
-</div>
+  ### Creating s3 buckets
+<p class="m-t-0"></p>A bucket can be created without any other restriction other than having valid
+            S3 credentials</div>
 
 <div class="flex flex-row gap-12">
   <div class="flex flex-col flex-35">
@@ -1100,6 +1100,10 @@ curl -X 'POST' \
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
+aws --endpoint-url http://<node-s3-endpoint>\ 
+  --profile <aws-credentials-profile>\
+  --no-verify-ssl\ # if local http endpoint
+  s3 mb s3://<your-bucket-name>
   ```
   </div>
 
@@ -1107,14 +1111,179 @@ curl -X 'POST' \
     <details>
       <summary class="font-bold highlight">Response</summary>
 
-  ```json
+  ```
+make_bucket: <your-bucket-name>
+  ```
+  </details>
+  </div>
+</div>
+</div>
+<!-- Create Bucket End -->
+
+<!-- Create data -->
+<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+<div class="flex flex-col">
+
+  ### Data uploads 
+<p class="m-t-0"></p>Data uploads (single and multipart) are done with the s3 put convenience
+            function.</div>
+
+<div class="flex flex-row gap-12">
+  <div class="flex flex-col flex-35">
+
+  <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+aws --endpoint-url http://<node-s3-endpoint>\ 
+  --profile <aws-credentials-profile>\
+  --no-verify-ssl\ # if local http endpoint
+  s3 cp <your-local-object> s3://<your-bucket-name>/<your-remote-name>
+  ```
+  </div>
+
+  <div class="flex flex-45">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```
+upload: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
+  ```
+  </details>
+  </div>
+</div>
+</div>
+<!-- Create data End -->
+
+<!-- Get data -->
+<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+<div class="flex flex-col">
+
+  ### Data downloads 
+<p class="m-t-0"></p>Data can be downloaded the same way data is uploaded.</div>
+
+<div class="flex flex-row gap-12">
+  <div class="flex flex-col flex-35">
+
+  <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+aws --endpoint-url http://<node-s3-endpoint>\ 
+  --profile <aws-credentials-profile>\
+  --no-verify-ssl\ # if local http endpoint
+  s3 cp s3://<your-bucket-name>/<your-remote-name> <your-local-object> 
+  ```
+  </div>
+
+  <div class="flex flex-45">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```
+download: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
+  ```
+  </details>
+  </div>
+</div>
+</div>
+<!-- Get data End -->
+
+
+<!-- Create replication rule -->
+<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+<div class="flex flex-col">
+
+  ### Data replication
+<p class="m-t-0"></p>Data can be replicated to other nodes via the 
+    <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html#API_PutBucketReplication_RequestSyntax">put-bucket-replication</a>
+    interface of s3.</div>
+
+<div class="flex flex-row gap-12">
+  <div class="flex flex-col flex-35">
+
+  <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+aws --endpoint-url http://<node-s3-endpoint>\ 
+  --profile <aws-credentials-profile>\
+  --no-verify-ssl\ # if local http endpoint
+  s3api put-bucket-replication\ 
+  --bucket <your-bucket-name>\ 
+  --replication-configuration '{
+  "Role": "arn:aws:s3:::",
+  "Rules": [
+    {
+      "ID": <your-replication-rule-name>,
+      "Destination": {
+	  "Bucket": "arn:aws:s3:<target-node-id>:account_id:<target-bucket>"
+      },
+      "Status": "Enabled"
+    }
+  ]
+}'
+  ```
+  </div>
+
+  <div class="flex flex-45">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```
   {}
   ```
   </details>
   </div>
 </div>
 </div>
-<!-- Get Search End -->
+<!-- Create Bucket End -->
+
+<!-- Create replication rule -->
+<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+<div class="flex flex-col">
+
+  ### Querying replication rules
+<p class="m-t-0"></p>Data replication rules can be viewed with this request.</div>
+
+<div class="flex flex-row gap-12">
+  <div class="flex flex-col flex-35">
+
+  <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```bash
+aws --endpoint-url http://<node-s3-endpoint>\ 
+  --profile <aws-credentials-profile>\
+  --no-verify-ssl\ # if local http endpoint
+  s3api get-bucket-replication\ 
+  --bucket <your-bucket-name>\ 
+  ```
+  </div>
+
+  <div class="flex flex-45">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```
+{
+    "ReplicationConfiguration": {
+        "Role": <your-user-id>,
+        "Rules": [
+            {
+                "Status": "ENABLED",
+                "ExistingObjectReplication": {
+                    "Status": "false"
+                },
+                "Destination": {
+                    "Bucket": <your-bucket-name>
+                }
+            }
+        ]
+    }
+}
+  ```
+  </details>
+  </div>
+</div>
+</div>
+<!-- Create Bucket End -->
 
 </details>
 <!-- Info Endpoint End -->
