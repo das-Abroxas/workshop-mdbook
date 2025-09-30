@@ -2,12 +2,9 @@
 
 <p class="text-xl">This section demonstrates how to interact with the API using practical command-line examples.</p>
 
-<p class="text-xl">Explore the endpoints below to learn how to retrieve information and manage users.</p>
-
+<p class="text-xl">Explore the endpoints below to learn how to easily communicate with any Aruna node.</p>
 
 ---
-
-
 
 <!-- Info Endpoint -->
 <details>
@@ -28,9 +25,9 @@
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-curl -H 'accept: application/json' \
-  -H 'Authorization: Bearer <your-secret-token>' \
-  -X GET 'http://<node-host>:8081/api/v3/info'
+  curl -H 'accept: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8081/api/v3/info'
   ```
   </div>
 
@@ -74,8 +71,8 @@ curl -H 'accept: application/json' \
 
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>/api/v3/info/realm'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>/api/v3/info/realm'
   ```
   </div>
 
@@ -149,8 +146,8 @@ curl -H 'accept: application/json' \
 
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X 'GET' 'http://<node-host>:8081/api/v3/info/search?query=ecoli'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X 'GET' 'http://<node-host>:8081/api/v3/info/search?query=ecoli'
   ```
   </div>
 
@@ -238,10 +235,10 @@ curl -H 'accept: application/json' \
     {
       "name": "Jannis Schlegel"
     }' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -H 'Content-Type: application/json' \
-    -X POST 'http://<node-host>:8081/api/v3/users'       
+       -H 'accept: application/json' \
+       -H 'Content-Type: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X POST 'http://<node-host>:8081/api/v3/users'       
   ```
   </div>
   <div class="flex flex-45">
@@ -281,8 +278,8 @@ curl -H 'accept: application/json' \
 
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>:8083/api/v3/users?id={user-identity}'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8083/api/v3/users?id={user-identity}'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -325,10 +322,10 @@ curl -H 'accept: application/json' \
     {
       "name": "my_group"
     }' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -H 'Content-Type: application/json' \
-    -X POST 'http://<node-host>:8081/api/v3/groups'
+       -H 'accept: application/json' \
+       -H 'Content-Type: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X POST 'http://<node-host>:8081/api/v3/groups'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -372,8 +369,8 @@ curl -H 'accept: application/json' \
 
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>:8081/api/v3/groups?id=01K60DD03CHA6ZZ3T01NDDPXN0'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8081/api/v3/groups?id=01K60DD03CHA6ZZ3T01NDDPXN0'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -416,18 +413,18 @@ curl -H 'accept: application/json' \
         <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-curl -d '
-  {
-    "group_id": "01K60DD03CHA6ZZ3T01NDDPXN0",
-    "user_roles": {
-      "member": [
-        "01K60DQTQSSW6CT7V6254XR91P@b4e63113c8f2d85f743841abecd8b10a873aa43207306d86c212967c9a8c1900"
-      ]
-    }' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Bearer <your-secret-token>' \
-  -H 'Content-Type: application/json' \
-  -X POST 'http://<node-host>:8081/api/v3/groups/user'
+  curl -d '
+    {
+      "group_id": "01K60DD03CHA6ZZ3T01NDDPXN0",
+      "user_roles": {
+        "member": [
+          "01K60DQTQSSW6CT7V6254XR91P@b4e63113c8f2d85f743841abecd8b10a873aa43207306d86c212967c9a8c1900"
+        ]
+      }' \
+       -H 'accept: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -H 'Content-Type: application/json' \
+       -X POST 'http://<node-host>:8081/api/v3/groups/user'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -465,76 +462,21 @@ curl -d '
         <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-curl -X 'POST' \
-  'http://<node-host>:8081/api/v3/resources/project' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Bearer <your-secret-token>' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "authors": [
-    {
-      "first": "string",
-      "id": "string",
-      "last": "string"
-    }
-  ],
-  "description": "string",
-  "group_id": "string",
-  "identifiers": [
-    "string"
-  ],
-  "labels": [
-    {
-      "key": "string",
-      "value": "string"
-    }
-  ],
-  "license_id": "string",
-  "name": "string",
-  "title": "string",
-  "visibility": "Public"
-}'
-  ```
-
-  </div>
-    <div class="flex flex-45">
-      <details>
-        <summary class="font-bold highlight">Response</summary>
-  
-  ```json
-    {
-      "resource": {
-        "id": "string",
-        "name": "string",
-        "title": "string",
-        "description": "string",
-        "revision": 0,
-        "variant": "Project",
-        "visibility": "Public",
-        "content_len": 123456,
-        "count": 0,
-        "created_at": "2025-09-29T06:47:25.047Z",
-        "last_modified": "2025-09-29T06:47:25.047Z",
-        "license_id": "string",
-        "locked": false,
-        "deleted": false,
+  curl -X 'POST' 'http://<node-host>:8081/api/v3/resources/project' \
+       -H 'accept: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -H 'Content-Type: application/json' \
+       -d '
+       {
         "authors": [
           {
-            "id": "string",
             "first": "string",
+            "id": "string",
             "last": "string"
           }
         ],
-        "data": [
-          {
-            "ContentHash": {
-              "datahash": "string"
-            }
-          },
-          {
-            "Link": "string"
-          }
-        ],
+        "description": "string",
+        "group_id": "string",
         "identifiers": [
           "string"
         ],
@@ -544,8 +486,63 @@ curl -X 'POST' \
             "value": "string"
           }
         ],
-      }
+        "license_id": "string",
+        "name": "string",
+        "title": "string",
+        "visibility": "Public"
+      }'
+  ```
+
+  </div>
+    <div class="flex flex-45">
+      <details>
+        <summary class="font-bold highlight">Response</summary>
+  
+  ```json
+  {
+    "resource": {
+      "id": "string",
+      "name": "string",
+      "title": "string",
+      "description": "string",
+      "revision": 0,
+      "variant": "Project",
+      "visibility": "Public",
+      "content_len": 123456,
+      "count": 0,
+      "created_at": "2025-09-29T06:47:25.047Z",
+      "last_modified": "2025-09-29T06:47:25.047Z",
+      "license_id": "string",
+      "locked": false,
+      "deleted": false,
+      "authors": [
+        {
+          "id": "string",
+          "first": "string",
+          "last": "string"
+        }
+      ],
+      "data": [
+        {
+          "ContentHash": {
+            "datahash": "string"
+          }
+        },
+        {
+          "Link": "string"
+        }
+      ],
+      "identifiers": [
+        "string"
+      ],
+      "labels": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ],
     }
+  }
   ```
 
   </details>
@@ -592,9 +589,9 @@ curl -X 'POST' \
       "variant": "Folder",
       "visibility": "Public"
     }' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X POST 'http://<node-host>:8081/api/v3/resources'
+       -H 'accept: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X POST 'http://<node-host>:8081/api/v3/resources'
   ```
 
   </div>
@@ -670,8 +667,8 @@ curl -X 'POST' \
   
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
   ```
   </div>
     <div class="flex flex-45">
@@ -745,8 +742,8 @@ curl -X 'POST' \
   
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>:8081/api/v3/resources/history?id=01K6AA6D7G48GNYMFD8G03QPWP'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8081/api/v3/resources/history?id=01K6AA6D7G48GNYMFD8G03QPWP'
   ```
   </div>
     <div class="flex flex-45">
@@ -806,9 +803,9 @@ curl -X 'POST' \
       "id": "01K6AA6D7G48GNYMFD8G03QPWP",
       "title": "Some new title"
     }' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X POST 'http://<node-host>:8081/api/v3/resources/title'
+       -H 'accept: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X POST 'http://<node-host>:8081/api/v3/resources/title'
   ```
 
   </div>
@@ -886,14 +883,14 @@ curl -X 'POST' \
         <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  curl -X 'POST' \
-      'http://<node-host>:8080/api/v3/users/credentials' \
-      -H 'accept: application/json' \
-      -H 'Authorization: Bearer <your-secret-token>' \
-      -H 'Content-Type: application/json' \
-      -d '{
-          "group_id": "string"
-      }'
+  curl -d '
+    {
+      "group_id": "string"
+    }' \
+       -H 'accept: application/json' \
+       -H 'Content-Type: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X POST 'http://<node-host>:8080/api/v3/users/credentials'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -925,12 +922,10 @@ curl -X 'POST' \
         <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  curl -X 'GET' \
-    'http://<node-host>:8080/api/v3/users/credentials' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -H 'Content-Type: application/json' \
-    -d '{}'
+  curl -H 'accept: application/json' \
+       -H 'Content-Type: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8080/api/v3/users/credentials'
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -961,12 +956,10 @@ curl -X 'POST' \
         <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  curl -X 'DELETE' \
-    'http://<node-host>:8080/api/v3/users/credentials' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -H 'Content-Type: application/json' \
-    -d '{}'
+  curl -H 'accept: application/json' \
+       -H 'Content-Type: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X DELETE 'http://<node-host>:8080/api/v3/users/credentials' \
   ```
   </div>
   <div class="flex flex-45 scroll">
@@ -999,8 +992,8 @@ curl -X 'POST' \
 
   ```bash
   curl -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -X GET 'http://<node-host>:8080/api/v3/data/location?hash=ebae78bcd5a3ef259a4da35b3ac39ea29b8e147eb288c69404dd1bfa58280df4'
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X GET 'http://<node-host>:8080/api/v3/data/location?hash=ebae78bcd5a3ef259a4da35b3ac39ea29b8e147eb288c69404dd1bfa58280df4'
   ```
   </div>
 
@@ -1043,17 +1036,18 @@ curl -X 'POST' \
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  curl -d '{
+  curl -d '
+    {
       "backend_path": "/some-path/to/the/data.log",
       "bucket": "my_bucket",
       "create_s3_path": true,
       "group_id": "01K60DD03CHA6ZZ3T01NDDPXN0",
       "key": "<some-s3-key-id>"
     }' \
-    -H 'accept: application/json' \
-    -H 'Authorization: Bearer <your-secret-token>' \
-    -H 'Content-Type: application/json' \
-    -X POST http://<node-host>:8080/api/v3/users/credentials'
+       -H 'accept: application/json' \
+       -H 'Content-Type: application/json' \
+       -H 'Authorization: Bearer <your-secret-token>' \
+       -X POST http://<node-host>:8080/api/v3/users/credentials'
   ```
   </div>
 
@@ -1091,8 +1085,9 @@ curl -X 'POST' \
 <div class="flex flex-col">
 
   ### Creating s3 buckets
-<p class="m-t-0"></p>A bucket can be created without any other restriction other than having valid
-            S3 credentials</div>
+  
+  A bucket can be created without any other restriction other than having valid S3 credentials
+</div>
 
 <div class="flex flex-row gap-12">
   <div class="flex flex-col flex-35">
@@ -1100,10 +1095,10 @@ curl -X 'POST' \
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-aws --endpoint-url http://<node-s3-endpoint>\ 
-  --profile <aws-credentials-profile>\
-  --no-verify-ssl\ # if local http endpoint
-  s3 mb s3://<your-bucket-name>
+  aws --endpoint-url http://<node-s3-endpoint>\ 
+      --profile <aws-credentials-profile>\
+      --no-verify-ssl\ # if local http endpoint
+      s3 mb s3://<your-bucket-name>
   ```
   </div>
 
@@ -1112,7 +1107,7 @@ aws --endpoint-url http://<node-s3-endpoint>\
       <summary class="font-bold highlight">Response</summary>
 
   ```
-make_bucket: <your-bucket-name>
+  make_bucket: <your-bucket-name>
   ```
   </details>
   </div>
@@ -1125,8 +1120,9 @@ make_bucket: <your-bucket-name>
 <div class="flex flex-col">
 
   ### Data uploads 
-<p class="m-t-0"></p>Data uploads (single and multipart) are done with the s3 put convenience
-            function.</div>
+
+  Data uploads (single and multipart) are done with the s3 put convenience function.
+</div>
 
 <div class="flex flex-row gap-12">
   <div class="flex flex-col flex-35">
@@ -1134,10 +1130,10 @@ make_bucket: <your-bucket-name>
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-aws --endpoint-url http://<node-s3-endpoint>\ 
-  --profile <aws-credentials-profile>\
-  --no-verify-ssl\ # if local http endpoint
-  s3 cp <your-local-object> s3://<your-bucket-name>/<your-remote-name>
+  aws --endpoint-url http://<node-s3-endpoint>\ 
+      --profile <aws-credentials-profile>\
+      --no-verify-ssl\ # if local http endpoint
+      s3 cp <your-local-object> s3://<your-bucket-name>/<your-remote-name>
   ```
   </div>
 
@@ -1146,7 +1142,7 @@ aws --endpoint-url http://<node-s3-endpoint>\
       <summary class="font-bold highlight">Response</summary>
 
   ```
-upload: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
+  upload: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
   ```
   </details>
   </div>
@@ -1159,7 +1155,7 @@ upload: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
 <div class="flex flex-col">
 
   ### Data downloads 
-<p class="m-t-0"></p>Data can be downloaded the same way data is uploaded.</div>
+  Data can be downloaded the same way data is uploaded.
 
 <div class="flex flex-row gap-12">
   <div class="flex flex-col flex-35">
@@ -1167,10 +1163,10 @@ upload: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-aws --endpoint-url http://<node-s3-endpoint>\ 
-  --profile <aws-credentials-profile>\
-  --no-verify-ssl\ # if local http endpoint
-  s3 cp s3://<your-bucket-name>/<your-remote-name> <your-local-object> 
+  aws --endpoint-url http://<node-s3-endpoint>\ 
+      --profile <aws-credentials-profile>\
+      --no-verify-ssl\ # if local http endpoint
+      s3 cp s3://<your-bucket-name>/<your-remote-name> <your-local-object> 
   ```
   </div>
 
@@ -1179,7 +1175,7 @@ aws --endpoint-url http://<node-s3-endpoint>\
       <summary class="font-bold highlight">Response</summary>
 
   ```
-download: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
+  download: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
   ```
   </details>
   </div>
@@ -1203,23 +1199,24 @@ download: ./<your-local-object> to s3://<your-bucket-name>/<your-remote-name>
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-aws --endpoint-url http://<node-s3-endpoint>\ 
-  --profile <aws-credentials-profile>\
-  --no-verify-ssl\ # if local http endpoint
-  s3api put-bucket-replication\ 
-  --bucket <your-bucket-name>\ 
-  --replication-configuration '{
-  "Role": "arn:aws:s3:::",
-  "Rules": [
-    {
-      "ID": <your-replication-rule-name>,
-      "Destination": {
-	  "Bucket": "arn:aws:s3:<target-node-id>:account_id:<target-bucket>"
-      },
-      "Status": "Enabled"
-    }
-  ]
-}'
+  aws --endpoint-url http://<node-s3-endpoint>\ 
+      --profile <aws-credentials-profile>\
+      --no-verify-ssl\ # if local http endpoint
+      s3api put-bucket-replication\ 
+      --bucket <your-bucket-name>\ 
+      --replication-configuration '
+      {
+        "Role": "arn:aws:s3:::",
+        "Rules": [
+          {
+            "ID": <your-replication-rule-name>,
+            "Destination": {
+              "Bucket": "arn:aws:s3:<target-node-id>:account_id:<target-bucket>"
+            },
+            "Status": "Enabled"
+          }
+        ]
+      }'
   ```
   </div>
 
@@ -1227,7 +1224,7 @@ aws --endpoint-url http://<node-s3-endpoint>\
     <details>
       <summary class="font-bold highlight">Response</summary>
 
-  ```
+  ```json
   {}
   ```
   </details>
@@ -1249,11 +1246,11 @@ aws --endpoint-url http://<node-s3-endpoint>\
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-aws --endpoint-url http://<node-s3-endpoint>\ 
-  --profile <aws-credentials-profile>\
-  --no-verify-ssl\ # if local http endpoint
-  s3api get-bucket-replication\ 
-  --bucket <your-bucket-name>\ 
+  aws --endpoint-url http://<node-s3-endpoint>\ 
+      --profile <aws-credentials-profile>\
+      --no-verify-ssl\ # if local http endpoint
+      s3api get-bucket-replication\ 
+      --bucket <your-bucket-name>
   ```
   </div>
 
@@ -1261,23 +1258,23 @@ aws --endpoint-url http://<node-s3-endpoint>\
     <details>
       <summary class="font-bold highlight">Response</summary>
 
-  ```
-{
+  ```json
+  {
     "ReplicationConfiguration": {
-        "Role": <your-user-id>,
-        "Rules": [
-            {
-                "Status": "ENABLED",
-                "ExistingObjectReplication": {
-                    "Status": "false"
-                },
-                "Destination": {
-                    "Bucket": <your-bucket-name>
-                }
-            }
-        ]
+      "Role": <your-user-id>,
+      "Rules": [
+        {
+          "Status": "ENABLED",
+          "ExistingObjectReplication": {
+            "Status": "false"
+          },
+          "Destination": {
+            "Bucket": <your-bucket-name>
+          }
+        }
+      ]
     }
-}
+  }
   ```
   </details>
   </div>

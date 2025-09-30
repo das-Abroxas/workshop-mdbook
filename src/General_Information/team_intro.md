@@ -64,7 +64,7 @@
 <!-- # What is Aruna -->
 
 <details>
-  <summary class="w-30 m-t-24 m-b-12 p-b-8 text-2xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">What is Aruna</summary>
+  <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">What is Aruna</summary>
 
   <div class="flex flex-row justify-between gap-4 m-t-2">
     <!-- Feature Card Start -->

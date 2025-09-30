@@ -13,7 +13,7 @@
   <div class="flex flex-col flex-45 p-8" style="border: 2px dashed #00a0cc; border-radius: 4px">
 
 <details>
-  <summary class="p-b-4 text-xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">
+  <summary class="p-b-4 accordion-border text-xl font-bold">
   Part 1: Learning & Discovery (1.5 hours)
   </summary>
 
@@ -35,7 +35,7 @@ Part 1 concludes with a comprehensive demonstration where we'll showcase the fea
   <div class="flex flex-col flex-45 p-8" style="border: 2px dashed #00a0cc; border-radius: 4px">
 
 <details>
-  <summary class="p-b-4 text-xl font-bold" style="border-bottom: 1px solid var(--aruna-highlight)">
+  <summary class="p-b-4 accordion-border text-xl font-bold">
   Part 2: Hands-On Experience (1.5 hours)
   </summary>
 
