@@ -10,7 +10,7 @@ In any case, if you want to interact with or join the workshop cluster, you shou
 
 This needs internet connection and `[docker|podman] compose` installed as you will download all needed containers to set up locally on your computer an Aruna cluster with 3 instances.
 
-You'll find the Docker Compose file here. Just download it and run `docker compose -f /path/to/the/compose.yaml up` to explore the Aruna ecosystem via spawned Swagger UIs.
+You'll find the [Docker Compose file here](https://das-abroxas.github.io/workshop-mdbook/assets/compose.yaml). Just download it and run `docker compose -f /path/to/the/compose.yaml up` to explore the Aruna ecosystem via spawned Swagger UIs.
 
 This compose file spawns the following containers:
 * A Keycloak which provides authentication 
