@@ -223,7 +223,8 @@
     <div class="flex flex-col">
 
   ### Add a new user
-  <p class="m-t-0">Lorem Ipsum</p>
+  <p class="m-t-0">A new user needs to register via this endpoint. This returns a token, that can be
+            used on any endpoint on the p2p network.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
@@ -265,8 +266,10 @@
   <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
     <div class="flex flex-col">
 
-  ### Authorize a user
-  <p class="m-t-0">Lorem Ipsum</p>
+  ### Query a user
+  <p class="m-t-0">A user can be queried via this endpoint. In the future this endpoint can be used
+            by group admins to query information about any group members or users with public
+                information.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
@@ -305,7 +308,8 @@
     <div class="flex flex-col">
 
   ### Create a new Group
-  <p class="m-t-0">Lorem Ipsum</p>
+  <p class="m-t-0">This endpoint can be used to create a new group. Groups form the basis of
+                authorization and authentication for resources in aruna.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
@@ -354,7 +358,7 @@
     <div class="flex flex-col">
 
   ### Get info of a Group
-  <p class="m-t-0">Lorem Ipsum</p>
+  <p class="m-t-0">Group information can be queried on this endpoint.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
@@ -399,7 +403,7 @@
     <div class="flex flex-col">
 
   ### Add User to a Group
-  <p class="m-t-0">Lorem Ipsum</p>
+  <p class="m-t-0">Users can be added via AddUserRequests by group admins.</p>
     </div>
     <div class="flex flex-row gap-12">
       <div class="flex flex-col flex-35">
