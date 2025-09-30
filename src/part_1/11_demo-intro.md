@@ -444,356 +444,428 @@ curl -d '
 <details>
   <summary class="w-60 m-t-24 m-b-12 p-b-8 accordion-border text-2xl font-bold">Resources Endpoint</summary>
 
-<!-- Create Resource -->
-<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
-<div class="flex flex-col">
-
-### Create a new metadata resource
-<p class="m-t-0">Lorem Ipsum Dolor</p>
-</div>
-
-<div class="flex flex-row gap-12">
-  <div class="flex flex-col flex-35">
-
-  <p class="m-y-0 font-bold highlight">Request</p>
-
-  ```json
-  curl -d '
-    {
-      "authors": [
-        {
-          "id": "string",
-          "first": "string",
-          "last": "string"
-        }
-      ],
-      "description": "string",
-      "identifiers": [
-        "string"
-      ],
-      "labels": [
-        {
-          "key": "string",
-          "value": "string"
-        }
-      ],
-      "license_id": "string",
-      "name": "string",
-      "parent_id": "string",
-      "title": "string",
-      "variant": "Folder",
-      "visibility": "Public"
-    }' \
-       -H 'accept: application/json' \
-       -X POST 'http://localhost:8081/api/v3/resources'
-  ```
+  <!-- Create Resource -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+  <div class="flex flex-col">
+  
+  ### Create a new metadata resource
+  <p class="m-t-0">Lorem Ipsum Dolor</p>
   </div>
-
-  <div class="flex flex-45">
-    <details>
-      <summary class="font-bold highlight">Response</summary>
-
-  ```json
-  {
-    "resource": {
-      "id": "string",
-      "name": "string",
-      "title": "string",
-      "description": "string",
-      "revision": 0,
-      "variant": "Project",
-      "visibility": "Public",
-      "content_len": 123456,
-      "count": 0,
-      "created_at": "2025-09-29T06:47:25.047Z",
-      "last_modified": "2025-09-29T06:47:25.047Z",
-      "license_id": "string",
-      "locked": false,
-      "deleted": false,
-      "authors": [
-        {
-          "id": "string",
-          "first": "string",
-          "last": "string"
-        }
-      ],
-      "data": [
-        {
-          "ContentHash": {
-            "datahash": "string"
-          }
-        },
-        {
-          "Link": "string"
-        }
-      ],
-      "identifiers": [
-        "string"
-      ],
-      "labels": [
-        {
-          "key": "string",
-          "value": "string"
-        }
-      ],
-    }
-  }
-  ```
-  </details>
-  </div>
-</div>
-</div>
-<!-- Create Resource End -->
-
-<!-- Get Resource -->
-<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
-<div class="flex flex-col">
-
-### Get info of an existing metadata resource
-<p class="m-t-0">Lorem Ipsum Dolor</p>
-</div>
-
-<div class="flex flex-row gap-12">
-  <div class="flex flex-col flex-35">
-
-  <p class="m-y-0 font-bold highlight">Request</p>
-
-  ```bash
-  curl -H 'accept: application/json' \
-       -X GET 'http://localhost:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
-  ```
-  </div>
-
-  <div class="flex flex-45">
-    <details>
-      <summary class="font-bold highlight">Response</summary>
-
-  ```json
-  {
-    "resource": {
-      "id": "string",
-      "name": "string",
-      "title": "string",
-      "description": "string",
-      "revision": 0,
-      "variant": "Project",
-      "visibility": "Public",
-      "content_len": 123456,
-      "count": 0,
-      "created_at": "2025-09-29T06:47:25.047Z",
-      "last_modified": "2025-09-29T06:47:25.047Z",
-      "license_id": "string",
-      "locked": false,
-      "deleted": false,
-      "authors": [
-        {
-          "id": "string",
-          "first": "string",
-          "last": "string"
-        }
-      ],
-      "data": [
-        {
-          "ContentHash": {
-            "datahash": "string"
-          }
-        },
-        {
-          "Link": "string"
-        }
-      ],
-      "identifiers": [
-        "string"
-      ],
-      "labels": [
-        {
-          "key": "string",
-          "value": "string"
-        }
-      ],
-    }
-  }
-  ```
-  </details>
-  </div>
-</div>
-</div>
-<!-- Get Resource End -->
-
-<!-- Get Resource History -->
-<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
-<div class="flex flex-col">
-
-### Get change history of a metadata resource
-<p class="m-t-0">Lorem Ipsum Dolor</p>
-</div>
-
-<div class="flex flex-row gap-12">
-  <div class="flex flex-col flex-35">
-
-  <p class="m-y-0 font-bold highlight">Request</p>
-
-  ```json
-  curl -H 'accept: application/json' \
-       -X GET 'http://localhost:8081/api/v3/resources/history?id=01K6AA6D7G48GNYMFD8G03QPWP'
-  ```
-  </div>
-
-  <div class="flex flex-45">
-    <details>
-      <summary class="font-bold highlight">Response</summary>
-
-  ```json
-  {
-    "history": [
+  
+  <div class="flex flex-row gap-12">
+    <div class="flex flex-col flex-35">
+  
+    <p class="m-y-0 font-bold highlight">Request</p>
+  
+    ```json
+    curl -d '
       {
-        "actor_id": {
-          "node_id": "string",
-          "realm_key": "string",
-          "user_identity": "string"
-        },
-        "deps": [
-          "string"
-        ],
-        "extra_bytes": [
-          1073741824
-        ],
-        "hash": "string",
-        "message": "string",
-        "operations": [
-          "string"
-        ],
-        "seq": 10,
-        "start_op": 9007199254740991,
-        "time": 9007199254740991
-      }
-    ]
-  }
-  ```
-  </details>
-  </div>
-</div>
-</div>
-<!-- Get Resource History End -->
-
-<!-- Update Resource Title -->
-<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
-<div class="flex flex-col">
-
-### Update title of a metadata resource
-<p class="m-t-0">Lorem Ipsum Dolor</p>
-</div>
-
-<div class="flex flex-row gap-12">
-  <div class="flex flex-col flex-35">
-
-  <p class="m-y-0 font-bold highlight">Request</p>
-
-  ```json
-  curl -d '
-    {
-      "id": "01K6AA6D7G48GNYMFD8G03QPWP",
-      "title": "Some new title"
-    }' \
-       -H 'accept: application/json' \
-       -X GET 'http://localhost:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
-  ```
-  </div>
-
-  <div class="flex flex-45">
-    <details>
-      <summary class="font-bold highlight">Response</summary>
-
-  ```json
-  {
-    "resource": {
-      "id": "01K6AA6D7G48GNYMFD8G03QPWP",
-      "name": "string",
-      "title": "Some new title",
-      "description": "string",
-      "revision": 0,
-      "variant": "Project",
-      "visibility": "Public",
-      "content_len": 123456,
-      "count": 0,
-      "created_at": "2025-09-29T06:47:25.047Z",
-      "last_modified": "2025-09-29T06:47:25.047Z",
-      "license_id": "string",
-      "locked": false,
-      "deleted": false,
-      "authors": [
-        {
-          "id": "string",
-          "first": "string",
-          "last": "string"
-        }
-      ],
-      "data": [
-        {
-          "ContentHash": {
-            "datahash": "string"
+        "authors": [
+          {
+            "id": "string",
+            "first": "string",
+            "last": "string"
           }
-        },
-        {
-          "Link": "string"
-        }
-      ],
-      "identifiers": [
-        "string"
-      ],
-      "labels": [
-        {
-          "key": "string",
-          "value": "string"
-        }
-      ],
+        ],
+        "description": "string",
+        "identifiers": [
+          "string"
+        ],
+        "labels": [
+          {
+            "key": "string",
+            "value": "string"
+          }
+        ],
+        "license_id": "string",
+        "name": "string",
+        "parent_id": "string",
+        "title": "string",
+        "variant": "Folder",
+        "visibility": "Public"
+      }' \
+         -H 'accept: application/json' \
+         -X POST 'http://localhost:8081/api/v3/resources'
+    ```
+    </div>
+  
+    <div class="flex flex-45">
+      <details>
+        <summary class="font-bold highlight">Response</summary>
+  
+    ```json
+    {
+      "resource": {
+        "id": "string",
+        "name": "string",
+        "title": "string",
+        "description": "string",
+        "revision": 0,
+        "variant": "Project",
+        "visibility": "Public",
+        "content_len": 123456,
+        "count": 0,
+        "created_at": "2025-09-29T06:47:25.047Z",
+        "last_modified": "2025-09-29T06:47:25.047Z",
+        "license_id": "string",
+        "locked": false,
+        "deleted": false,
+        "authors": [
+          {
+            "id": "string",
+            "first": "string",
+            "last": "string"
+          }
+        ],
+        "data": [
+          {
+            "ContentHash": {
+              "datahash": "string"
+            }
+          },
+          {
+            "Link": "string"
+          }
+        ],
+        "identifiers": [
+          "string"
+        ],
+        "labels": [
+          {
+            "key": "string",
+            "value": "string"
+          }
+        ],
+      }
     }
-  }
-  ```
-  </details>
+    ```
+    </details>
+    </div>
   </div>
-</div>
-</div>
-<!-- Update Resource Title End -->
+  </div>
+  <!-- Create Resource End -->
+  
+  <!-- Get Resource -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+  <div class="flex flex-col">
+  
+  ### Get info of an existing metadata resource
+  <p class="m-t-0">Lorem Ipsum Dolor</p>
+  </div>
+  
+  <div class="flex flex-row gap-12">
+    <div class="flex flex-col flex-35">
+  
+    <p class="m-y-0 font-bold highlight">Request</p>
+  
+    ```bash
+    curl -H 'accept: application/json' \
+         -X GET 'http://localhost:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
+    ```
+    </div>
+  
+    <div class="flex flex-45">
+      <details>
+        <summary class="font-bold highlight">Response</summary>
+  
+    ```json
+    {
+      "resource": {
+        "id": "string",
+        "name": "string",
+        "title": "string",
+        "description": "string",
+        "revision": 0,
+        "variant": "Project",
+        "visibility": "Public",
+        "content_len": 123456,
+        "count": 0,
+        "created_at": "2025-09-29T06:47:25.047Z",
+        "last_modified": "2025-09-29T06:47:25.047Z",
+        "license_id": "string",
+        "locked": false,
+        "deleted": false,
+        "authors": [
+          {
+            "id": "string",
+            "first": "string",
+            "last": "string"
+          }
+        ],
+        "data": [
+          {
+            "ContentHash": {
+              "datahash": "string"
+            }
+          },
+          {
+            "Link": "string"
+          }
+        ],
+        "identifiers": [
+          "string"
+        ],
+        "labels": [
+          {
+            "key": "string",
+            "value": "string"
+          }
+        ],
+      }
+    }
+    ```
+    </details>
+    </div>
+  </div>
+  </div>
+  <!-- Get Resource End -->
+  
+  <!-- Get Resource History -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+  <div class="flex flex-col">
+  
+  ### Get change history of a metadata resource
+  <p class="m-t-0">Lorem Ipsum Dolor</p>
+  </div>
+  
+  <div class="flex flex-row gap-12">
+    <div class="flex flex-col flex-35">
+  
+    <p class="m-y-0 font-bold highlight">Request</p>
+  
+    ```json
+    curl -H 'accept: application/json' \
+         -X GET 'http://localhost:8081/api/v3/resources/history?id=01K6AA6D7G48GNYMFD8G03QPWP'
+    ```
+    </div>
+  
+    <div class="flex flex-45">
+      <details>
+        <summary class="font-bold highlight">Response</summary>
+  
+    ```json
+    {
+      "history": [
+        {
+          "actor_id": {
+            "node_id": "string",
+            "realm_key": "string",
+            "user_identity": "string"
+          },
+          "deps": [
+            "string"
+          ],
+          "extra_bytes": [
+            1073741824
+          ],
+          "hash": "string",
+          "message": "string",
+          "operations": [
+            "string"
+          ],
+          "seq": 10,
+          "start_op": 9007199254740991,
+          "time": 9007199254740991
+        }
+      ]
+    }
+    ```
+    </details>
+    </div>
+  </div>
+  </div>
+  <!-- Get Resource History End -->
+  
+  <!-- Update Resource Title -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+  <div class="flex flex-col">
+  
+  ### Update title of a metadata resource
+  <p class="m-t-0">Lorem Ipsum Dolor</p>
+  </div>
+  
+  <div class="flex flex-row gap-12">
+    <div class="flex flex-col flex-35">
+  
+    <p class="m-y-0 font-bold highlight">Request</p>
+  
+    ```json
+    curl -d '
+      {
+        "id": "01K6AA6D7G48GNYMFD8G03QPWP",
+        "title": "Some new title"
+      }' \
+         -H 'accept: application/json' \
+         -X GET 'http://localhost:8081/api/v3/resources?id=01K6AA6D7G48GNYMFD8G03QPWP'
+    ```
+    </div>
+  
+    <div class="flex flex-45">
+      <details>
+        <summary class="font-bold highlight">Response</summary>
+  
+    ```json
+    {
+      "resource": {
+        "id": "01K6AA6D7G48GNYMFD8G03QPWP",
+        "name": "string",
+        "title": "Some new title",
+        "description": "string",
+        "revision": 0,
+        "variant": "Project",
+        "visibility": "Public",
+        "content_len": 123456,
+        "count": 0,
+        "created_at": "2025-09-29T06:47:25.047Z",
+        "last_modified": "2025-09-29T06:47:25.047Z",
+        "license_id": "string",
+        "locked": false,
+        "deleted": false,
+        "authors": [
+          {
+            "id": "string",
+            "first": "string",
+            "last": "string"
+          }
+        ],
+        "data": [
+          {
+            "ContentHash": {
+              "datahash": "string"
+            }
+          },
+          {
+            "Link": "string"
+          }
+        ],
+        "identifiers": [
+          "string"
+        ],
+        "labels": [
+          {
+            "key": "string",
+            "value": "string"
+          }
+        ],
+      }
+    }
+    ```
+    </details>
+    </div>
+  </div>
+  </div>
+  <!-- Update Resource Title End -->
+  
+  <!-- Create credentials location -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+  <div class="flex flex-col">
 
-<!-- Create credentials location -->
-<div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
-<div class="flex flex-col">
+  <!-- Create Credentials -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+    <div class="flex flex-col">
 
-### Create S3 credentials
-<p class="m-t-0">Lorem Ipsum Dolor</p>
-</div>
+  ### Create s3 credentials 
+  <p class="m-t-0">S3 Credentials for a user are always group specific. They can be created for any
+            node in the registered realm.</p>
+    </div>
+    <div class="flex flex-row gap-12">
+      <div class="flex flex-col flex-35">
+        <p class="m-y-0 font-bold highlight">Request</p>
 
-<div class="flex flex-row gap-12">
-  <div class="flex flex-col flex-35">
-
-  <p class="m-y-0 font-bold highlight">Request</p>
-
-  ```bash
-  curl -d '{
-      "group_id": "01K60DD03CHA6ZZ3T01NDDPXN0"
-    }' \
-       -H 'accept: application/json' \
-       -H 'Content-Type: application/json' \
-       -X POST http://localhost:8080/api/v3/users/credentials'
+  ```sh
+  curl -X 'POST' \
+      'http://localhost:8080/api/v3/users/credentials' \
+      -H 'accept: application/json' \
+      -H 'Authorization: Bearer <your-secret-token>' \
+      -H 'Content-Type: application/json' \
+      -d '{
+          "group_id": "string"
+      }'
   ```
   </div>
-
-  <div class="flex flex-45">
+  <div class="flex flex-45 scroll">
     <details>
       <summary class="font-bold highlight">Response</summary>
 
   ```json
   {
-    "access_key_id": "<some-ulid>>",
-    "secret_access_key": "<some-secret-key>"
+    "access_key_id": "<your-access-key-id>",
+    "secret_access_key": "<your-secret-access-key>""
   }
   ```
   </details>
   </div>
-</div>
-</div>
-<!-- Create Credentials End -->
+  </div>
+  </div>
+  <!-- Create Credentials End -->
+
+  <!-- Get Credentials -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+    <div class="flex flex-col">
+
+  ### Get S3 credentials 
+  <p class="m-t-0">Your already created credentials can always be displayed with a 
+  `GetCredentialsRequest`. Credentials are only valid for each individual node.</p>
+    </div>
+    <div class="flex flex-row gap-12">
+      <div class="flex flex-col flex-35">
+        <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```sh
+  curl -X 'GET' \
+    'http://localhost:8080/api/v3/users/credentials' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{}'
+  ```
+  </div>
+  <div class="flex flex-45 scroll">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```json
+  {
+    "access_key_id": "<your-access-key-id>",
+    "secret_access_key": "<your-secret-access-key>""
+  }
+  ```
+  </details>
+  </div>
+  </div>
+  </div>
+  <!-- Get Credentials End -->
+
+  <!-- Delete Credentials -->
+  <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
+    <div class="flex flex-col">
+
+  ### Deleting S3 credentials 
+  <p class="m-t-0">Credentials can be deleted on nodes with a `DeleteCredentialsRequest`.</p>
+    </div>
+    <div class="flex flex-row gap-12">
+      <div class="flex flex-col flex-35">
+        <p class="m-y-0 font-bold highlight">Request</p>
+
+  ```sh
+  curl -X 'DELETE' \
+    'http://localhost:8080/api/v3/users/credentials' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{}'
+  ```
+  </div>
+  <div class="flex flex-45 scroll">
+    <details>
+      <summary class="font-bold highlight">Response</summary>
+
+  ```json
+  {}
+  ```
+  </details>
+  </div>
+  </div>
+  </div>
+  <!-- Get Credentials End -->
 
 <!-- Get data location -->
 <div class="m-y-8 p-8 rounded-8" style="border: 2px dotted var(--aruna-highlight)">
