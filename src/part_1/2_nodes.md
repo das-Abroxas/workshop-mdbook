@@ -15,7 +15,7 @@
   </ul>
 
   </div>
-  <div class="flex flex-col flex-50 p-x-6">
+  <div class="flex flex-col p-x-6">
     <p align="center">
       <img src="../assets/images/node.drawio.png"/>
     </p>

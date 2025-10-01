@@ -1189,16 +1189,16 @@
 <div class="flex flex-col">
 
   ### Data replication
-<p class="m-t-0"></p>Data can be replicated to other nodes via the 
-    <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html#API_PutBucketReplication_RequestSyntax">put-bucket-replication</a>
-    interface of s3.</div>
+Data can be replicated to other nodes via the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html#API_PutBucketReplication_RequestSyntax">put-bucket-replication</a> interface of s3.
+
+</div>
 
 <div class="flex flex-row gap-12">
   <div class="flex flex-col flex-35">
 
   <p class="m-y-0 font-bold highlight">Request</p>
 
-  ```bash
+  ```python
   aws --endpoint-url http://<node-s3-endpoint>\ 
       --profile <aws-credentials-profile>\
       --no-verify-ssl\ # if local http endpoint
@@ -1238,7 +1238,9 @@
 <div class="flex flex-col">
 
   ### Querying replication rules
-<p class="m-t-0"></p>Data replication rules can be viewed with this request.</div>
+Data replication rules can be viewed with this request.
+
+</div>
 
 <div class="flex flex-row gap-12">
   <div class="flex flex-col flex-35">
