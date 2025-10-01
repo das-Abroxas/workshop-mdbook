@@ -1,9 +1,9 @@
 # Policies
 
 <div class="flex flex-row gap-2 m-t-2 m-b-12">
-  <div class="flex flex-col flex-55 p-x-6 aruna-border rounded-4 text-2xl justify-center">
+  <div class="flex flex-col p-x-6 aruna-border rounded-4 text-2xl justify-center">
 
-  <ul class="">
+  <ul class="flex flex-col gap-12" style="">
     <!-- <li>Disclaimer: Not yet implemented</li> -->
     <li>Basic build blocks for the different layers of trust</li>
     <li>Define which actions are allowed on which resources</li>

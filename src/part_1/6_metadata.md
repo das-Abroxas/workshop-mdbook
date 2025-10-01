@@ -1,9 +1,9 @@
 # Metadata
 
 <div class="flex flex-row gap-2 m-t-2 m-b-12">
-  <div class="flex flex-col flex-60 rounded-4 text-2xl justify-center" style="padding: 0 15px; border: 2px dashed #00a0cc">
+  <div class="flex flex-col p-x-6 aruna-border rounded-4 text-2xl justify-center">
 
-  <ul class="text-2xl" style="">
+  <ul class="flex flex-col gap-12" style="">
     <li>Metadata is stored as RO-Crate</li>
     <ul>
       <li>Base metadata standard: Schema.org</li>
@@ -22,7 +22,7 @@
 
   <div class="flex flex-col justify-center" style="padding: 0 15px;">
     <p align="center">
-      <img src="../assets/images/node_comm_.drawio.png"/>
+      <img src="../assets/images/node_comm.drawio.png"/>
     </p>
   </div>
 </div>

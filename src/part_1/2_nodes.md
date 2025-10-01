@@ -3,7 +3,7 @@
 <div class="flex flex-row gap-2 m-t-2 m-b-12">
   <div class="flex flex-col p-x-6 aruna-border rounded-4 text-2xl justify-center">
 
-  <ul class="" style="">
+  <ul class="flex flex-col gap-12" style="">
     <li>Are completely autonomous</li>
     <li>Act as primary access to:</li>
     <ul>
@@ -27,7 +27,7 @@
 
   <div class="flex flex-col p-x-6 aruna-border rounded-4 text-xl">
 
-  In a federated scientific data management system, individual nodes serve as autonomous components that collectively form a distributed research infrastructure. **Institutional Storage Gateway Nodes** provide access to large-scale research repositories, exposing datasets while maintaining local security policies. **Personal Research Nodes** represent scientists' laptops or workstations that share specialized datasets, analysis tools, or computational resources directly from personal environments. **Compute Cluster Gateway Nodes** serve as entry points to high-performance computing resources, enabling remote access to parallel processing clusters or specialized facilities. Each node maintains its own security boundaries and governance while contributing to seamless cross-institutional resource and data sharing.
+  In a federated scientific data management system, individual nodes serve as autonomous components that collectively form a distributed research infrastructure. **Institutional Storage Gateway Nodes** provide access to large-scale research repositories, exposing datasets while maintaining local security policies. **Personal Research Nodes** represent scientists' laptops or workstations that share specialized datasets, analysis tools, or computational resources directly from personal environments. **Compute Cluster Gateway Nodes** serve as entry points to high-performance computing resources, enabling remote access to parallel processing clusters or specialized facilities. Each node maintains its own security boundaries and governance while contributing to seamless cross-institutional resource and data sharing. A node can also perform several of these roles simultaneously, enabling advanced data orchestration strategies such as data-to-compute and compute-to-data in the network.
   </div>
 </details>
 
