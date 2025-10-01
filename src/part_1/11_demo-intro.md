@@ -1095,9 +1095,9 @@
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  aws --endpoint-url http://<node-s3-endpoint>\ 
-      --profile <aws-credentials-profile>\
-      --no-verify-ssl\ # if local http endpoint
+  aws --endpoint-url http://<node-s3-endpoint> \
+      --profile <aws-credentials-profile> \
+      --no-verify-ssl \
       s3 mb s3://<your-bucket-name>
   ```
   </div>
@@ -1130,9 +1130,9 @@
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  aws --endpoint-url http://<node-s3-endpoint>\ 
-      --profile <aws-credentials-profile>\
-      --no-verify-ssl\ # if local http endpoint
+  aws --endpoint-url http://<node-s3-endpoint> \
+      --profile <aws-credentials-profile> \
+      --no-verify-ssl \
       s3 cp <your-local-object> s3://<your-bucket-name>/<your-remote-name>
   ```
   </div>
@@ -1163,9 +1163,9 @@
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  aws --endpoint-url http://<node-s3-endpoint>\ 
-      --profile <aws-credentials-profile>\
-      --no-verify-ssl\ # if local http endpoint
+  aws --endpoint-url http://<node-s3-endpoint> \
+      --profile <aws-credentials-profile> \
+      --no-verify-ssl \
       s3 cp s3://<your-bucket-name>/<your-remote-name> <your-local-object> 
   ```
   </div>
@@ -1199,11 +1199,11 @@ Data can be replicated to other nodes via the <a href="https://docs.aws.amazon.c
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```python
-  aws --endpoint-url http://<node-s3-endpoint>\ 
-      --profile <aws-credentials-profile>\
-      --no-verify-ssl\ # if local http endpoint
-      s3api put-bucket-replication\ 
-      --bucket <your-bucket-name>\ 
+  aws --endpoint-url http://<node-s3-endpoint> \
+      --profile <aws-credentials-profile> \
+      --no-verify-ssl \
+      s3api put-bucket-replication \
+      --bucket <your-bucket-name> \
       --replication-configuration '
       {
         "Role": "arn:aws:s3:::",
@@ -1248,10 +1248,10 @@ Data replication rules can be viewed with this request.
   <p class="m-y-0 font-bold highlight">Request</p>
 
   ```bash
-  aws --endpoint-url http://<node-s3-endpoint>\ 
-      --profile <aws-credentials-profile>\
-      --no-verify-ssl\ # if local http endpoint
-      s3api get-bucket-replication\ 
+  aws --endpoint-url http://<node-s3-endpoint> \
+      --profile <aws-credentials-profile> \
+      --no-verify-ssl \
+      s3api get-bucket-replication \
       --bucket <your-bucket-name>
   ```
   </div>
